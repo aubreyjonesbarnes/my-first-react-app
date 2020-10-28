@@ -1,0 +1,138 @@
+
+/*
+
+// Batman
+
+//const superheroes = supersData.results[0].members 
+
+const heroName = superheroes.reduce((acc, superhero) => {
+    //const powers = acc.durability === "55" ? 'Batman' : 'Superman'
+    return acc.name > superhero.name ? acc : superhero
+
+}) 
+
+const heroStats = superheroes.reduce((acc, superhero) => {
+    //const powers = acc.durability === "55" ? 'Batman' : 'Superman'
+    return acc.id > superhero.id ? acc : superhero
+
+}) 
+
+
+// Ironman
+
+//const superheroes2 = supersData2.results[0].members 
+
+
+const heroName2 = superheroes2.reduce((acc, superhero2) => {
+    //const powers = acc.durability === "55" ? 'Batman' : 'Superman'
+    return acc.name > superhero2.name ? acc : superhero2
+
+}) 
+
+
+const heroStats2 = superheroes2.reduce((acc, superhero2) => {
+    //const powers = acc.durability === "55" ? 'Batman' : 'Superman'
+    return acc.id > superhero2.id ? acc : superhero2
+
+}) 
+
+
+//ternary operator: condition ? true  : false
+*/
+
+
+
+
+   <h1>{superheroData.heroes.length} Heroes</h1>
+            <ListItem button> 
+            <ListItemAvatar>
+            <LazyLoad once={true} alt="...">
+            <Avatar 
+            alt={'Avatar'}
+            src={batman}
+            />
+            </LazyLoad>
+            </ListItemAvatar>
+            <ListItemText primary={`${superheroData.name}`}/>
+            <ListItemSecondaryAction>
+            <Checkbox edge="end"/>
+
+            </ListItemSecondaryAction>
+            </ListItem>
+
+<Card className="card">
+<CardActionArea>
+  <CardMedia className="CardImage"
+    image={batman}
+    title="Contemplative Reptile"
+  />
+  <CardContent>
+    <Typography gutterBottom variant="h5" component="h2">
+    <h1>Name: {superheroData.name}</h1>
+    </Typography>
+    <Typography variant="body2" color="textSecondary" component="p">
+      <p>ID: {superheroData.id}</p>
+    </Typography>
+  </CardContent>
+</CardActionArea>
+</Card>
+
+</div>
+)   
+})}
+</div>
+
+
+
+
+ListItem, ListItemAvatar, ListItemText, ListItemSecondaryAction, Checkbox, Avatar
+
+import { Card, CardActionArea, CardContent, CardMedia, Typography} from '@material-ui/core'
+
+import {batman} from './assets/images/batman.jpg'
+
+
+
+
+
+<h1>{superheroData.heroes.length} Heroes!</h1> 
+<List dense className="powerstatsList"> 
+    {superheroData.heroes.map((superhero) => {
+    
+            return (
+              <LazyLoad 
+              key={superhero.intelligence + superhero.strength}
+              placeholder={<Loading />}
+              height={200}
+              >
+              <SuperheroesList
+              key={superhero.appearance + superhero.id}
+              
+              >
+
+              </SuperheroesList>
+              <SuperheroView
+              key={superhero.appearance + superhero.id}
+              
+              >
+
+              </SuperheroView>
+              </LazyLoad>
+            )
+            })}
+            </List>
+
+
+
+
+
+
+//const SuperheroView = (props) => {
+const superhero = superheroData.results[0].powerstats
+
+const craziestSuperheroes = superhero.reduce((acc, hero) => {
+const superheroName = acc.name === 'batman' ? 'batman' : 'ironman'
+return acc.name > hero.name 
+? { ...acc, superheroName}
+: { ...hero, superheroName}
+})
