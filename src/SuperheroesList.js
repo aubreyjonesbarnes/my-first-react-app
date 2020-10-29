@@ -31,7 +31,7 @@ const heroName = heroes.reduce((acc, hero) => {
 const superPowers = acc.durability === "55" ? 'Batman' : 'Superman'
   return acc.name > hero.strength 
   ? { ...acc, superPowers}
-  ? { ...hero, superPowers}
+  : { ...hero, superPowers}
 
 }) 
 
