@@ -24,7 +24,7 @@ const SuperheroesList = () => {
 
 const [superheroData, setSuperheroData] = useState({ loading: false, heroes: [] })
 const heroes = superheroData.results[0].powerstats
-
+//commit this
 
 
 const heroName = heroes.reduce((acc, hero) => {
