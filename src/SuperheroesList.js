@@ -21,8 +21,25 @@ const Loading = () => (
 
 const SuperheroesList = () => {
 
-const [superheroData, setSuperheroData] = useState({ loading: false, heroes: [] })
 
+const [superheroData, setSuperheroData] = useState({ loading: false, heroes: [] })
+const heroes = superheroData.results[0].powerstats
+
+
+
+const heroName = heroes.reduce((acc, hero) => {
+const superPowers = acc.durability === "55" ? 'Batman' : 'Superman'
+  return acc.name > hero.strength 
+  ? { ...acc, superPowers}
+  ? { ...hero, superPowers}
+
+}) 
+
+const heroStats = heroes.reduce((acc, hero) => {
+  //const powers = acc.durability === "55" ? 'Batman' : 'Superman'
+  return acc.id > hero.id ? acc : hero.name
+
+}) 
 
 
 //const [superData, setSuperData] = useState({superHeroes: [] })
@@ -57,6 +74,9 @@ return (
 
 <div>
 
+
+<h1>{heroName}</h1>
+<h1>{heroStats}</h1>
 <h1>{superheroData.heroes.name} Heroes!</h1> 
 <h1>{superheroData.heroes.name} Heroes!</h1> 
 <List dense className="powerstatsList"> 
