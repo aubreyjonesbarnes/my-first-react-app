@@ -23,7 +23,7 @@ const SuperheroesList = () => {
 
 
 const [superheroData, setSuperheroData] = useState({ loading: false, heroes: [] })
-const heroes = superheroData.results[0].powerstats
+const heroes = superheroData.results
 
 
 
@@ -79,6 +79,7 @@ return (
 <h1>{heroStats}</h1>
 <h1>{superheroData.heroes.name} Heroes!</h1> 
 <h1>{superheroData.heroes.name} Heroes!</h1> 
+<h1>{superheroData.heroes.length} Heroes!</h1> 
 <List dense className="powerstatsList"> 
     {superheroData.heroes.map((superhero) => {
     
@@ -89,6 +90,7 @@ return (
               height={200}
               >
               <SuperheroView
+              heroes={superhero}
               key={superhero.durability + superhero.power}
               
               >

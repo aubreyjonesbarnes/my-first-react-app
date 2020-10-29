@@ -4,7 +4,7 @@ import React from 'react'
 //import SuperheroesList from '.SuperheroesList'
 //import {List} from '@material-ui/core'
 import {LazyLoad} from 'react-lazyload'
-import {ListItem, ListItemAvatar, ListItemSecondaryAction, Checkbox, Avatar} from '@material-ui/core'
+import {ListItem, ListItemAvatar, ListItemText, ListItemSecondaryAction, Checkbox, Avatar} from '@material-ui/core'
 import {Card, CardActionArea, CardContent, CardMedia, Typography} from '@material-ui/core'
 import batman from './assets/images/batman.jpg' 
 
@@ -26,7 +26,7 @@ const Loading = () => (
 
 
 const SuperheroView = (props) => {
-//const superhero = props.hero
+const superhero = props.hero
 
 //const superheroName = superhero.appearance === null ? '' : superhero.strength
 
@@ -45,7 +45,7 @@ return (
             />
             </LazyLoad>
             </ListItemAvatar>
-           
+           <ListItemText primary={`${superhero.appearance}`} />
             <ListItemSecondaryAction>
             <Checkbox edge="end"/>
 
