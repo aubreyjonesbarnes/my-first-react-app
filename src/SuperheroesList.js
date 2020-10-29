@@ -23,7 +23,7 @@ const SuperheroesList = () => {
 
 
 const [superheroData, setSuperheroData] = useState({ loading: false, heroes: [] })
-const heroes = superheroData.results
+const heroes = superheroData.results[0].powerstats
 
 
 
