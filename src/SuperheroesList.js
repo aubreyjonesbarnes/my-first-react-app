@@ -38,7 +38,7 @@ const superPowers = acc.durability === "55" ? 'Batman' : 'Superman'
 const heroStats = heroes.reduce((acc, hero) => {
   //const powers = acc.durability === "55" ? 'Batman' : 'Superman'
   return acc.id > hero.id ? acc : hero
-
+  //commit this
 }) 
 
 
