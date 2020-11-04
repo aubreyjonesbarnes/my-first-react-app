@@ -27,7 +27,7 @@ const Loading = () => (
 
 const SuperheroView = (props) => {
 const hero = props.hero
-
+//test commit
 //const superheroName = superhero.appearance === null ? '' : superhero.strength
 
 
@@ -45,7 +45,7 @@ return (
             />
             </LazyLoad>
             </ListItemAvatar>
-           <ListItemText primary={`${hero.appearance}`} />
+           <ListItemText primary={`${hero.name}`} />
             <ListItemSecondaryAction>
             <Checkbox edge="end"/>
 
