@@ -20,7 +20,7 @@ const Loading = () => (
 
 
 
-const SuperheroesList = () => {
+const SortinghatList = () => {
 
 
 const [harrypotterData, setHarrypotterData] = useState({ loading: false, houses: [] })
@@ -50,7 +50,7 @@ const fetchHouses = async () => {
   }
   
   useEffect(() => {
-  fetchHouses()
+  //fetchHouses()
   }, [])
   
 
@@ -107,5 +107,5 @@ return (
   )
 }
 
-  export default SuperheroesList
+  export default SortinghatList
 

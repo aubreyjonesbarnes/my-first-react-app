@@ -1,7 +1,7 @@
 import React from 'react' 
 //import supersData from '../src/data/batman.json'
 //import supersData2 from '../src/data/ironman.json'
-//import SuperheroesList from '.SuperheroesList'
+//import SortingHatList from '.SortinghatList'
 //import {List} from '@material-ui/core'
 import {LazyLoad} from 'react-lazyload'
 import {ListItem, ListItemAvatar, ListItemText, ListItemSecondaryAction, Checkbox, Avatar} from '@material-ui/core'

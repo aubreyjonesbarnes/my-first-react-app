@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import SuperheroesList from './SuperheroesList'
+import SortinghatList from './SortinghatList'
 //import SuperheroView from './SuperheroView'
 //import Villians from './Villians'
 
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      <SuperheroesList/>
+      <SortinghatList/>
    
      
 

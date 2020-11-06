@@ -23,8 +23,9 @@ width: 100%;
 }
 
 .topNav li {
+  display: inline-block;
   list-style-type: none; 
-  padding: 10px 0px; 
+  padding: 10px 10px; 
   
 
 }
