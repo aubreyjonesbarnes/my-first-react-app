@@ -5,12 +5,12 @@ import React from 'react'
 function Nav(){
     return(
     <div>
-       <h1 className ="header">LIGHTNING CAPES</h1>
-       <h3 className = "secondaryHeader">Are You a Superhero or Villian?</h3>
+       <h1 className ="header">Marvel Avengers</h1>
+       <h3 className = "secondaryHeader">Are You a Marvel Superhero?</h3>
      <nav className="topNav">
         <ul>
-        <li><a href="#">SUPERHEROES</a></li>
-        <li><a href="#">VILLIANS</a></li>
+        <li>AVENGERS</li>
+       
         </ul>
      </nav>
     </div>
