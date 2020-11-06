@@ -42,7 +42,7 @@ const fetchHouses = async () => {
   console.log(response.data) 
   setHarrypotterData({
       loading: false, 
-      houses: response.data[0]
+      houses: response.data[0].name
     })
   }).catch(function (error){ 
       console.log(error)
