@@ -34,12 +34,13 @@ const SortinghatList = () => {
 
   useEffect(() => {
     const fetchHouses = async () => {
+      setHarrypotterData({ loading: true, houses: [] })
       const result = await axios(
         `https://www.potterapi.com/v1/houses?key=$2a$10$OYdflm8pD4OZkWnQdzIj6.TEJlf.coZ3eux5XCFVTfqNWIGsDNzoO`,
       )
 
       console.log(result.data)
-      setHarrypotterData({ loading: true, houses: result.data })
+      setHarrypotterData({ loading: false, houses: result.data })
     }
     fetchHouses()
   }, [])
